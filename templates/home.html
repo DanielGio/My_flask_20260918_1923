@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ sitename }}</title>
+</head>
+
+<body>
+
+    {# Esse é meu cabeçalho (Comentário oculto!)#}
+    <header><h1>{{ sitename }}</h1></header>
+
+<nav>
+    <a href="{{ url_for('index') }}">Início</a> |
+    <a href="{{ url_for('about') }}">Sobre</a>
+</nav>
+
+    <h2>Página Inicial</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magnam nihil ducimus quas! Dolores deserunt omnis
+         fugit incidunt repellat perferendis voluptas iure impedit, dolorum commodi tempore blanditiis praesentium in
+         dolore?</p>
+    
+</body>
+
+</html>
