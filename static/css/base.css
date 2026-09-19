@@ -1,0 +1,16 @@
+body {
+    background-image: url('/static/img/bg01.jpg');
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+}
+
+header a {
+    text-decoration: none;
+}

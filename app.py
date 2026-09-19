@@ -1,16 +1,16 @@
-# Importando dependencias
-from flask import Flask, render_template 
- 
- # Inicializar variáveis e Componentes
+# Importando as dependências
+from flask import Flask, render_template
 
-# nome do aplicativo (Site da Web) → global
+# Inicializar variáveis e componentes
+
+# Nome do aplicativo (Site da Web) → global
 sitename = "My Flask"
 
- # Inicializa o aplicativo Flask (HTTP)
-app = Flask(__name__) 
- 
+# Inicializa o plaicativo Flask (HTTP)
+app = Flask(__name__)
 
- # Rota da página inicial (rota raíz ou root)
+
+# Rota da página inicial (rota raiz ou root)
 @app.route("/")
 def index():
     return render_template(
@@ -30,5 +30,5 @@ def about():
 
 
 # Ativa o modo DEBUG e o main loop no localhost
-if __name__ == "__main__": 
-   app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
