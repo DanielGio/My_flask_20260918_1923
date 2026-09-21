@@ -4,7 +4,7 @@ from flask import Flask, render_template
 # Inicializar variáveis e componentes
 
 # Nome do aplicativo (Site da Web) → global
-sitename = "My Flask"
+sitename = "Meu Site!"
 
 # Inicializa o plaicativo Flask (HTTP)
 app = Flask(__name__)
@@ -14,17 +14,34 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template(
-        "_base.html",
+        "home.html",
+        tag_title=sitename,
         sitename=sitename
     )
 
-# Uma rota bem simples
 
+'''
+Criando páginas / rotas → Passos iniciais:
+    1) Crie o template HTML em `/templates`
+    2) Define a rota em `app.py`
+    3) Cria a função para a rota
+    4) Desenvolva a função para retornar o template HTML renderizado
+'''
+
+# Rota para '/contacts'
+@app.route("/contacts", methods=['GET', 'POST'])
+def contacts():
+    return render_template(
+        'contacts.html',
+        tag_title=f"{sitename} - Faça Contato",
+        sitename=sitename
+    )
 
 @app.route("/about")
 def about():
     return render_template(
         'about.html',
+        tag_title=f"{sitename} - Sobre...",
         sitename=sitename
     )
 
