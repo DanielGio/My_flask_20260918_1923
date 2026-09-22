@@ -1,9 +1,13 @@
 body {
     background-attachment: fixed;
-    background-color: orange;
+    background-color: rgb(207, 66, 239);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+main {
+    background-color: rgba(220, 220, 220, 0.75);
 }
 
 a {
@@ -22,5 +26,5 @@ header a {
 .contact-form {
     width: 100%;
     max-width: 500px;
-    margin:auto;
+    margin: auto;
 }

@@ -12,7 +12,7 @@
             background-image: url("{{ url_for('static', filename='img/bg01.jpg') }}");
         }
     </style>
-    <title>{{ sitename }}</title>
+    <title>{{ tag_title }}</title>
 </head>
 
 <body class="m-0 p-2 d-flex flex-column min-vh-100">
@@ -21,7 +21,7 @@
 
         <a href="{{ url_for('index') }}" class="ps-2">
             <h1 class="d-inline text-light">
-                <span class=>&#9749;</span> {{ sitename }}
+                <span class="text-light">&#9749;</span> {{ sitename }}
             </h1>
         </a>
 <!--
@@ -55,7 +55,7 @@
         </div>
     </nav>
 
-    <main class="container bg-light px-3 mt-2 rounded flex-grow-1">
+    <main class="container px-3 mt-2 rounded flex-grow-1">
         {% block content %}{% endblock %}
     </main>
 
@@ -64,7 +64,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
 </body>
 
 </html>
